@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         addCircle(radius: 180, colour: UIColor.black.cgColor,lineWidth: 4, isShowingScore: false)
-        self.textLabel.text = "Your Credit Score is Loading..\n Please Wait"
+        self.textLabel.text = "Your Credit Score is Loading..."
         self.getCustomerData()
         
     }
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.setCustomer(customer: customer)
                 }
-            }else{
+            } else {
                 guard let error = error else { assertionFailure("Should not have reached here"); return }
                 self.displayErrorAlert(error: error)
             }
